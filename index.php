@@ -1,4 +1,4 @@
-<?php include __DIR__ . 'database.php'; ?>
+<?php include __DIR__ . '/database.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,6 +8,31 @@
     <title></title>
   </head>
   <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <div class="logo">
+
+          </div>
+
+        </div>
+      </header>
+      <main>
+        <div class="cds-container">
+          <?php foreach ($database as $data) {?>
+          <div class="cd">
+            <img src="<?php echo $data['poster']; ?>" alt="poster">
+            <h2><?php echo $data['title'] ?></h2>
+            <span><?php echo $data['author'] ?></span>
+            <span><?php echo $data['year'] ?></span>
+
+          </div>
+          <?php  } ?>
+
+        </div>
+      </main>
+
+    </div>
 
   </body>
 </html>
