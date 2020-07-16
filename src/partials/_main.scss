@@ -1,0 +1,32 @@
+main .cds-container {
+  margin: auto;
+  width: 1170px;
+  @include flex_center;
+  flex-wrap: wrap;
+  padding: 100px 0;
+  & .cd {
+    @include flex_column;
+    flex-basis: 200px;
+    padding: 20px;
+    margin: 10px 20px;
+    height: 360px;
+    background: $card_color;
+    text-align: center;
+    & img {
+      max-width: 100%;
+    }
+    & h2 {
+      margin: 20px 0;
+      color: white;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+    & span.author {
+      color: grey;
+      font-size: 20px;
+    }
+    & span.year {
+      color: grey;
+    }
+  }
+}

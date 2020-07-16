@@ -23,8 +23,8 @@
           <div class="cd">
             <img src="<?php echo $data['poster']; ?>" alt="poster">
             <h2><?php echo $data['title'] ?></h2>
-            <span><?php echo $data['author'] ?></span>
-            <span><?php echo $data['year'] ?></span>
+            <span class="author"><?php echo $data['author'] ?></span>
+            <span class="year"><?php echo $data['year'] ?></span>
 
           </div>
           <?php  } ?>
