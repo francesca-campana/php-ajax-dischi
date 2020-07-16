@@ -1,4 +1,16 @@
-header .container {
-  height: 70px;
+header {
   background-color: #2e3a46;
+  position: fixed;
+  width: 100%;
+  & .container {
+    height: 70px;
+    width: 1200px;
+    margin: 0 auto;
+    @include flex_between;
+
+    & .logo{
+      width: 50px;
+    }
+  }
+
 }

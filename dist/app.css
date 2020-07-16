@@ -17,9 +17,23 @@ main {
   height: 100vh;
 }
 
+header {
+  background-color: #2e3a46;
+  position: fixed;
+  width: 100%;
+}
+
 header .container {
   height: 70px;
-  background-color: #2e3a46;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container .logo {
+  width: 50px;
 }
 
 main .cds-container {
