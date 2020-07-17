@@ -16101,7 +16101,9 @@ $(document).ready(function () {
       var template = Handlebars.compile(source);
 
       for (var i = 0; i < cds.length; i++) {
-        var cd = cds[i];
+        var cd = cds[i]; //var author = cd['author'];
+        //console.log(author);
+
         var html = template(cd);
         $('.cds-container').append(html);
       }
@@ -16110,15 +16112,27 @@ $(document).ready(function () {
       alert('errore');
     }
   });
-  $('.generi').change(function () {
-    var selectGenere = $(this).val();
+  $.ajax({
+    url: 'http://localhost:8888/php-ajax-dischi/server.php',
+    method: 'GET',
+    success: function success(datares) {
+      var cds = datares;
+      var source = $("#author-template").html();
+      var template = Handlebars.compile(source);
 
-    if (selectGenere == 'generi') {
-      $('.cd').fadeIn();
-      console.log(selectGenere);
-    } else {
-      $('.cd').fadeOut();
-      $('.cd.' + selectGenere).fadeIn();
+      for (var i = 0; i < cds.length; i++) {
+        var cd = cds[i];
+        var author = cd['author'];
+        console.log(author);
+        var context = {
+          author: author
+        };
+        var html = template(context);
+        $('.authors').append(html);
+      }
+    },
+    error: function error() {
+      alert('errore');
     }
   });
 });

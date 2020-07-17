@@ -16,9 +16,11 @@
             <img src="img/logo-small.svg" alt="logo">
           </div>
           <select class="authors" name="">
-            
+            <option value="all">all</option>
 
-          </select>
+
+            </select>
+
 
         </div>
       </header>
@@ -29,7 +31,8 @@
       </main>
 
     </div>
-    <!-- Handlebars template -->
+
+    <!-- Handlebars cd-template -->
     <script id="cd-template" type="text/x-handlebars-template">
       <div class="cd">
 
@@ -41,7 +44,14 @@
       </div>
 
     </script>
-    <!-- Fine Handlebars template -->
+    <!-- Fine Handlebars cd-template -->
+    <!-- Handlebars author-template -->
+    <script id="author-template" type="text/x-handlebars-template">
+      <option value="{{{ author }}}">{{ author }}</option>
+
+    </script>
+      <!-- Fine Handlebars author-template -->
+
     <script type="text/javascript" src="dist/app.js"></script>
 
   </body>
