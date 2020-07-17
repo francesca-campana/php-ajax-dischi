@@ -16110,6 +16110,17 @@ $(document).ready(function () {
       alert('errore');
     }
   });
+  $('.generi').change(function () {
+    var selectGenere = $(this).val();
+
+    if (selectGenere == 'generi') {
+      $('.cd').fadeIn();
+      console.log(selectGenere);
+    } else {
+      $('.cd').fadeOut();
+      $('.cd.' + selectGenere).fadeIn();
+    }
+  });
 });
 
 /***/ }),

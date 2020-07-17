@@ -15,12 +15,8 @@
           <div class="logo">
             <img src="img/logo-small.svg" alt="logo">
           </div>
-          <select class="generi" name="">
-            <option value="generi">Generi</option>
-            <option value="jazz">Jazz</option>
-            <option value="metal">Metal</option>
-            <option value="rock">Rock</option>
-            <option value="pop">Pop</option>
+          <select class="authors" name="">
+            
 
           </select>
 
