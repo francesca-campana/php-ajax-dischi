@@ -1,5 +1,5 @@
 <?php include __DIR__ . '/database.php'; ?>
-<?php// include __DIR__ . '/function.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -32,7 +32,7 @@
           <?php foreach ($database as $data) {?>
           <div class="cd">
 
-            <img src="<?php echo $data['poster']; ?>" alt="poster">
+            <img src="<?php echo $data['poster']; ?>" alt="<?php echo $data['author'] ?>">
             <h2><?php echo $data['title'] ?></h2>
             <span class="author"><?php echo $data['author'] ?></span>
             <span class="year"><?php echo $data['year'] ?></span>
@@ -44,6 +44,8 @@
       </main>
 
     </div>
+
+    <script type="text/javascript" src="dist/app.js"></script>
 
   </body>
 </html>
