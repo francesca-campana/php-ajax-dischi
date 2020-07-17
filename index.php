@@ -15,11 +15,13 @@
           <div class="logo">
             <img src="img/logo-small.svg" alt="logo">
           </div>
+
           <select class="authors" name="">
-
-
+            <option value="all">all</option>
+            <?php foreach ($database as $data) {?>
+            <option value="<?php echo $data["author"] ?>"><?php echo $data["author"] ?></option>
+            <?php } ?>
           </select>
-
         </div>
       </header>
       <main>
@@ -34,7 +36,7 @@
             <span class="year"><?php echo $data['year'] ?></span>
 
           </div>
-          <?php  } ?>
+          <?php } ?>
 
         </div>
       </main>

@@ -9,45 +9,55 @@
     <title></title>
   </head>
   <body>
+    <!-- Wrapper -->
     <div class="wrapper">
+      <!-- Header-->
       <header>
+        <!-- Container -->
         <div class="container">
+          <!-- Logo -->
           <div class="logo">
             <img src="img/logo-small.svg" alt="logo">
           </div>
+          <!-- Fine Logo -->
+          <!-- Select -->
           <select class="authors" name="">
             <option value="all">all</option>
-
-
-            </select>
-
+          </select>
+          <!-- Fine Select -->
 
         </div>
+        <!-- Fine Container -->
       </header>
+      <!-- Fine Header-->
+      <!-- Main -->
       <main>
+        <!-- Cds container -->
         <div class="cds-container">
-
         </div>
+        <!-- Fine Cds container -->
       </main>
+      <!-- Fine Main -->
 
     </div>
+    <!-- Fine Wrapper -->
 
     <!-- Handlebars cd-template -->
     <script id="cd-template" type="text/x-handlebars-template">
-      <div class="cd">
-
+      <!-- Singolo cd -->
+      <div data="{{{ author }}}" class="cd">
         <img src="{{ poster }}" alt="{{ title }}">
         <h2>{{ title }}</h2>
-        <span class="author">{{ author }}</span>
+        <span class="author ">{{ author }}</span>
         <span class="year">{{ year }}</span>
-
       </div>
+      <!-- Fine Singolo cd -->
 
     </script>
     <!-- Fine Handlebars cd-template -->
     <!-- Handlebars author-template -->
     <script id="author-template" type="text/x-handlebars-template">
-      <option value="{{{ author }}}">{{ author }}</option>
+      <option data="{{{ author }}}" value="{{{ author }}}">{{ author }}</option>
 
     </script>
       <!-- Fine Handlebars author-template -->

@@ -1,7 +1,7 @@
 var $ = require( "jquery" );
 var Handlebars = require("handlebars");
 $(document).ready(function () {
-
+//chiamata ajax per leggere i cd dal database e stamparli a schermo con handlebars
   $.ajax(
 
     {
@@ -29,7 +29,7 @@ $(document).ready(function () {
 
   });
   $.ajax(
-
+//chiamata ajax per leggere il valore degli 'author' dal database e stamparli nella select con handlebars
     {
       url: 'http://localhost:8888/php-ajax-dischi/server.php',
       method: 'GET',
@@ -41,7 +41,7 @@ $(document).ready(function () {
         for (var i = 0; i < cds.length; i++) {
           var cd = cds[i];
           var author = cd['author'];
-          console.log(author);
+
           var context = { author: author};
 
           var html = template(context);
@@ -54,6 +54,25 @@ $(document).ready(function () {
         alert('errore');
       }
 
+  });
+
+  $('.authors').change(function(){
+
+  var selectAuthor = $(this).val();
+
+  var dataAuthor = '.cd[ data= "' + selectAuthor + '"]';
+  console.log(dataAuthor);
+
+
+
+    if (selectAuthor == 'all') {
+      $('.cd').fadeIn();
+
+    }else {
+      $('.cd').fadeOut();
+      $(dataAuthor).fadeIn();
+
+    }
   });
 
 });

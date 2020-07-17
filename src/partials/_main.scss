@@ -1,6 +1,7 @@
 main .cds-container {
   margin: auto;
   width: 1170px;
+  
   @include flex_center;
   flex-wrap: wrap;
   padding: 100px 0;
